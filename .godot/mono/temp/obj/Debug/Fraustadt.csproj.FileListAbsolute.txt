@@ -1,0 +1,17 @@
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\Fraustadt.deps.json
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\Fraustadt.runtimeconfig.json
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\Fraustadt.dll
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\Fraustadt.pdb
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\GodotSharp.dll
+Z:\Code\Fraustadt\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.csproj.AssemblyReference.cache
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.AssemblyInfoInputs.cache
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.AssemblyInfo.cs
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.csproj.CoreCompileInputs.cache
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.csproj.CopyComplete
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.dll
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\refint\Fraustadt.dll
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.pdb
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\Fraustadt.genruntimeconfig.cache
+Z:\Code\Fraustadt\.godot\mono\temp\obj\Debug\ref\Fraustadt.dll

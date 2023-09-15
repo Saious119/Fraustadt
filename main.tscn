@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgh6k37ooo3n8"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_v0yn2"]
+
+[sub_resource type="Curve2D" id="Curve2D_ler5k"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_v0yn2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="MobTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ler5k")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]

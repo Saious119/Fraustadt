@@ -1,0 +1,8 @@
+res://main.tscn
+res://Mob.tscn
+res://Cannonball.tscn
+res://Bullet.tscn
+res://Player.tscn
+res://Main.cs
+res://Mob.cs
+res://Player.cs

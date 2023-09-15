@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgle7olxxpclm"]
+
+[ext_resource type="Texture2D" uid="uid://b8ov2m3n3lcth" path="res://assets/cannon-ball.png" id="1_bdbx7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k58cf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bdbx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o4sk"]
+size = Vector2(65, 64)
+
+[node name="Cannonball" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_k58cf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_2o4sk")

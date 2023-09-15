@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://cac174078mb5g"]
+
+[ext_resource type="Texture2D" uid="uid://bwl6hl4v5323m" path="res://assets/swed-right1.png" id="1_121lm"]
+[ext_resource type="Script" path="res://Mob.cs" id="1_miigp"]
+[ext_resource type="Texture2D" uid="uid://5whyb5r7oxsr" path="res://assets/swed-right2.png" id="2_ht3ar"]
+[ext_resource type="Texture2D" uid="uid://bbft5ji3ql3w7" path="res://assets/swed-death1.png" id="2_pnajq"]
+[ext_resource type="Texture2D" uid="uid://44hsmvrrkm5h" path="res://assets/swed-death2.png" id="3_a36ka"]
+[ext_resource type="Texture2D" uid="uid://dwjnnged2gj50" path="res://assets/swed-up1.png" id="3_yko8f"]
+[ext_resource type="Texture2D" uid="uid://ty6tkcfa2poy" path="res://assets/swed-up2.png" id="4_73u5e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6hvk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pnajq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a36ka")
+}],
+"loop": true,
+"name": &"death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_121lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ht3ar")
+}],
+"loop": true,
+"name": &"right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yko8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73u5e")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xs2l7"]
+size = Vector2(81, 60)
+
+[node name="Mob" type="RigidBody2D"]
+script = ExtResource("1_miigp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_r6hvk")
+animation = &"right"
+frame_progress = 0.0690214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -10)
+shape = SubResource("RectangleShape2D_xs2l7")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2DScreenExited"]
