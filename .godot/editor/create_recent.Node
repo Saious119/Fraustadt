@@ -1,0 +1,7 @@
+Label
+Timer
+Button
+CanvasLayer
+CollisionShape2D
+AnimatedSprite2D
+RigidBody2D

@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfhfit2hx0ecr"]
+
+[ext_resource type="Script" path="res://HUD.cs" id="1_iv5k5"]
+[ext_resource type="FontFile" uid="uid://u3ng4achuqlw" path="res://assets/fonts/Xolonium-Regular.ttf" id="2_n4kdf"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_iv5k5")
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.5
+offset_right = 22.5
+offset_bottom = 81.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -40.5
+offset_right = 304.0
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_font_sizes/font_size = 64
+text = "Defend Fraustadt!"
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -162.5
+offset_top = -86.0
+offset_right = 162.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_font_sizes/font_size = 64
+text = "Press \"A\""
+
+[node name="CannonballLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -425.0
+offset_bottom = 61.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_font_sizes/font_size = 48
+text = "Cannon Balls: 0"
