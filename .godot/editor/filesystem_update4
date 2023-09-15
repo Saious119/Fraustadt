@@ -3,3 +3,10 @@ res://RingPiece.cs
 res://HUD.cs
 res://HUD.tscn
 res://main.tscn
+res://Main.cs
+res://Mob.cs
+res://Player.cs
+res://Mob.tscn
+res://Cannonball.tscn
+res://Bullet.tscn
+res://Player.tscn

@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfhfit2hx0ecr"]
+[gd_scene load_steps=5 format=3 uid="uid://cfhfit2hx0ecr"]
 
 [ext_resource type="Script" path="res://HUD.cs" id="1_iv5k5"]
 [ext_resource type="FontFile" uid="uid://u3ng4achuqlw" path="res://assets/fonts/Xolonium-Regular.ttf" id="2_n4kdf"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_v8dhh"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_abw5u"]
+events = [SubResource("InputEventAction_v8dhh")]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_iv5k5")
 
 [node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -20,6 +28,7 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_n4kdf")
 theme_override_font_sizes/font_size = 64
 text = "0"
+horizontal_alignment = 1
 
 [node name="Message" type="Label" parent="."]
 anchors_preset = 8
@@ -36,6 +45,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_n4kdf")
 theme_override_font_sizes/font_size = 64
 text = "Defend Fraustadt!"
+horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 7
@@ -51,7 +61,8 @@ grow_vertical = 0
 size_flags_horizontal = 6
 theme_override_fonts/font = ExtResource("2_n4kdf")
 theme_override_font_sizes/font_size = 64
-text = "Press \"A\""
+shortcut = SubResource("Shortcut_abw5u")
+text = "Press \"Enter\""
 
 [node name="CannonballLabel" type="Label" parent="."]
 anchors_preset = 1
@@ -63,3 +74,6 @@ grow_horizontal = 0
 theme_override_fonts/font = ExtResource("2_n4kdf")
 theme_override_font_sizes/font_size = 48
 text = "Cannon Balls: 0"
+
+[connection signal="timeout" from="MessageTimer" to="." method="OnMessageTimerTimeout"]
+[connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
