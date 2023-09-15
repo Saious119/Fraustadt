@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jgj4MPO3TuiTfhTD3JB6WY/OqniJcEq21mdOG5fJTT4zLl3kv5B+5pPeFOx8ZYmYUY1hDXUezga6iT44rrvtvQ==",
+  "dgSpecHash": "ROzcIQVvb4+NF74zeJLmJSTLwJymURphgnd36NmkjBBFOEMjDkg3ve2kg/SCYGCRLDKzVWfeOSvjCb8XH6CWzw==",
   "success": true,
   "projectFilePath": "Z:\\Code\\Fraustadt\\Fraustadt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sht13\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
     "C:\\Users\\sht13\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
-    "C:\\Users\\sht13\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+    "C:\\Users\\sht13\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.21\\microsoft.netcore.app.runtime.linux-x64.6.0.21.nupkg.sha512",
+    "C:\\Users\\sht13\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.21\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }
