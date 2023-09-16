@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfhfit2hx0ecr"]
 
 [ext_resource type="Script" path="res://HUD.cs" id="1_iv5k5"]
-[ext_resource type="FontFile" uid="uid://u3ng4achuqlw" path="res://assets/fonts/Xolonium-Regular.ttf" id="2_n4kdf"]
+[ext_resource type="FontFile" uid="uid://caeudtwfba7jm" path="res://assets/fonts/PressStart2P-vaV7.ttf" id="2_j2526"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_v8dhh"]
 action = &"start_game"
@@ -25,7 +25,7 @@ offset_right = 22.5
 offset_bottom = 81.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_fonts/font = ExtResource("2_j2526")
 theme_override_font_sizes/font_size = 64
 text = "0"
 horizontal_alignment = 1
@@ -42,7 +42,7 @@ offset_right = 304.0
 offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_fonts/font = ExtResource("2_j2526")
 theme_override_font_sizes/font_size = 64
 text = "Defend Fraustadt!"
 horizontal_alignment = 1
@@ -59,7 +59,7 @@ offset_right = 162.5
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 6
-theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_fonts/font = ExtResource("2_j2526")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_abw5u")
 text = "Press \"Enter\""
@@ -71,7 +71,7 @@ anchor_right = 1.0
 offset_left = -425.0
 offset_bottom = 61.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("2_n4kdf")
+theme_override_fonts/font = ExtResource("2_j2526")
 theme_override_font_sizes/font_size = 48
 text = "Cannon Balls: 0"
 
