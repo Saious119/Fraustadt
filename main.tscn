@@ -1,19 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgh6k37ooo3n8"]
+[gd_scene load_steps=7 format=3 uid="uid://cgh6k37ooo3n8"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_v0yn2"]
 [ext_resource type="PackedScene" uid="uid://cac174078mb5g" path="res://Mob.tscn" id="2_gpejd"]
 [ext_resource type="PackedScene" uid="uid://cfhfit2hx0ecr" path="res://HUD.tscn" id="2_u3w47"]
+[ext_resource type="PackedScene" uid="uid://byaq6uiwvdsw7" path="res://Bullet.tscn" id="3_37aie"]
 [ext_resource type="PackedScene" uid="uid://bl4ivh6b24r87" path="res://Player.tscn" id="3_e70po"]
 
 [sub_resource type="Curve2D" id="Curve2D_ler5k"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1152, 0, 0, 0, 0, 0, 1152, 648, 0, 0, 0, 0, 0, 648, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1920, 0, 0, 0, 0, 0, 1920, 1080, 0, 0, 0, 0, 0, 1080, 0, 0, 0, 0, 0, 0)
 }
 point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_v0yn2")
 MobScene = ExtResource("2_gpejd")
+BulletScene = ExtResource("3_37aie")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -26,6 +28,10 @@ color = Color(0, 0, 0, 1)
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.383
+
+[node name="BulletTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="StartTimer" type="Timer" parent="."]
 
@@ -40,10 +46,11 @@ curve = SubResource("Curve2D_ler5k")
 [node name="HUD" parent="." instance=ExtResource("2_u3w47")]
 
 [node name="Player" parent="." instance=ExtResource("3_e70po")]
-position = Vector2(576, 488)
+position = Vector2(576, 448)
 
 [connection signal="timeout" from="ScoreTimer" to="." method="OnScoreTimerTimeout"]
 [connection signal="timeout" from="MobTimer" to="." method="OnMobTimerTimeout"]
+[connection signal="timeout" from="BulletTimer" to="." method="OnBulletTimerTimeout"]
 [connection signal="timeout" from="StartTimer" to="." method="OnStartTimerTimeout"]
 [connection signal="StartGame" from="HUD" to="." method="NewGame"]
 [connection signal="Hit" from="Player" to="." method="GameOver"]

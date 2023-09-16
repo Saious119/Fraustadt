@@ -1,5 +1,6 @@
-Label
+VisibleOnScreenNotifier2D
 Timer
+Label
 Button
 CanvasLayer
 CollisionShape2D

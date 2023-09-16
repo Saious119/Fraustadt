@@ -48,13 +48,13 @@ animations = [{
 size = Vector2(81, 60)
 
 [node name="Mob" type="RigidBody2D" groups=["mobs"]]
+gravity_scale = 0.0
 script = ExtResource("1_miigp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["mobs"]]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_r6hvk")
 animation = &"right"
-frame_progress = 0.0690214
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -10)

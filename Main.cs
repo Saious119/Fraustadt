@@ -5,6 +5,9 @@ public partial class Main : Node
 {
 	[Export]
 	public PackedScene MobScene { get; set; }
+	
+	[Export]
+	public PackedScene BulletScene { get; set; }
 
 	private int _score;
 	// Called when the node enters the scene tree for the first time.
@@ -48,6 +51,7 @@ public partial class Main : Node
 	{
 		GetNode<Timer>("MobTimer").Start();
 		GetNode<Timer>("ScoreTimer").Start();
+		GetNode<Timer>("BulletTimer").Start();
 	}
 	private void OnMobTimerTimeout()
 	{
@@ -64,7 +68,20 @@ public partial class Main : Node
 		var velocity = new Vector2((float)GD.RandRange(150.0,250.0), 0);
 		mob.LinearVelocity = velocity.Rotated(direction);
 		
+		mob.Start(mob.Position);
+		
 		AddChild(mob);
 	}
-}
+	private void OnBulletTimerTimeout()
+	{
+		if(Input.IsActionPressed("left_click")){
+			Player player = GetNode<Player>("Player");
+			Bullet bullet = BulletScene.Instantiate<Bullet>();
+			bullet.Position = player.Position;
+			bullet.GlobalRoation = player.Rotation;
+			bullet.Start(bullet.Position);
+			AddChild(bullet);
+		}
+	}
 
+}

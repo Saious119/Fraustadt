@@ -24,7 +24,7 @@ public partial class HUD : CanvasLayer
 	}
 	async public void ShowGameOver()
 	{
-		ShowMessage("Frausradt Has Fallen!");
+		ShowMessage("Fraustadt Has Fallen!");
 		
 		var messageTimer = GetNode<Timer>("MessageTimer");
 		await ToSignal(messageTimer, Timer.SignalName.Timeout);
